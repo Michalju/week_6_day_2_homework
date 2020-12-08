@@ -6,19 +6,21 @@ describe("Room class test suit:", function(){
     let bedroom;
 
     beforeEach(function(){
-        bedroom = new Room(32)
+        bedroom = new Room(32, false);
     });
 
-    it("Should have an area", function(){});
+    it("Should have an area", function(){
         //Arrange
 
         //Act
 
         //Assert
+        console.log(bedroom.area);
         assert.strictEqual(bedroom.area,32);
-        beedroom.area = 52;
+        bedroom.area = 52;
         assert.strictEqual(bedroom.area,52);
-    it("Should not be being painted at the begining", function(){});
+    });
+    it("Should not be being painted at the begining", function(){
         //Arrange
 
         //Act
@@ -27,8 +29,9 @@ describe("Room class test suit:", function(){
         assert.strictEqual(bedroom.painted,false);
         bedroom.painted = true;
         assert.strictEqual(bedroom.painted,true);
+    });
 
-    it("Should be able to be painted", function(){});
+    it("Should be able to be painted", function(){
         //Arrange
 
         //Act
@@ -37,6 +40,6 @@ describe("Room class test suit:", function(){
         assert.strictEqual(bedroom.toBePainted,false);
         bedroom.toBePainted = true;
         assert.strictEqual(bedroom.toBePainted,true);
-
+    });
 
 });
