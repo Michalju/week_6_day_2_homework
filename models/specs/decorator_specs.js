@@ -9,7 +9,8 @@ describe("Decorator class test suit:", function () {
     let paintWhiteMedium;
     let paintWhiteLarge;
     let toilet;
-    let livingroom;
+    let livingRoom;
+    let bathroom;
 
     beforeEach(function () {
         adamDecorator = new Decorator();
@@ -74,8 +75,8 @@ describe("Decorator class test suit:", function () {
         billDecorator.addPaint(paintWhiteMedium);
 
         //Assert
-        assert.StrictEqual(adamDecorator.checkIfEnoughPaint(livingRoom), false);
-        assert.StrictEqual(billDecorator.checkIfEnoughPaint(toilet), true);
+        assert.strictEqual(adamDecorator.checkIfEnoughPaint(livingRoom), false);
+        assert.strictEqual(billDecorator.checkIfEnoughPaint(toilet), true);
     });
 
     it("Shall be able to paint room if has enough paint in stock", function () {
@@ -97,23 +98,23 @@ describe("Decorator class test suit:", function () {
         billDecorator.paint(toilet)
 
         //Assert to confirm adam has not painted livingRoom
-        assert.StrictEqual(adamDecorator.paintTotal(), 15);
-        assert.StrictEqual(livingRoom.painted, false);
-        assert.StrictEqual(livingRoom.toBePainted, true);
+        assert.strictEqual(adamDecorator.paintTotal(), 15);
+        assert.strictEqual(livingRoom.painted, false);
+        assert.strictEqual(livingRoom.toBePainted, true);
 
         //Assert to confirm bill has not painted toilet
-        assert.StrictEqual(billDecorator.paintTotal(), 35);
-        assert.StrictEqual(toilet.painted, false);
-        assert.StrictEqual(toilet.toBePainted, false);
+        assert.strictEqual(billDecorator.paintTotal(), 35);
+        assert.strictEqual(toilet.painted, false);
+        assert.strictEqual(toilet.toBePainted, false);
 
         // Act
         // bill will paint bathroom
         billDecorator.paint(bathroom)
 
         //Assert to confirm bill painted bathroom
-        assert.StrictEqual(billDecorator.paintTotal(), 5);
-        assert.StrictEqual(bathroom.painted, true);
-        assert.StrictEqual(bathroom.toBePainted, false);
+        assert.strictEqual(billDecorator.paintTotal(), 5);
+        assert.strictEqual(bathroom.painted, true);
+        assert.strictEqual(bathroom.toBePainted, false);
 
     });
 
