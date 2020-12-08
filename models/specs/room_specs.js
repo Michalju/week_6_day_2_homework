@@ -15,7 +15,6 @@ describe("Room class test suit:", function(){
         //Act
 
         //Assert
-        console.log(bedroom.area);
         assert.strictEqual(bedroom.area,32);
         bedroom.area = 52;
         assert.strictEqual(bedroom.area,52);

@@ -2,7 +2,7 @@ const assert = require('assert');
 const PaintCan = require('../paint_can');
 
 
-describe("Room class test suit:", function () {
+describe("PaintCan class test suit:", function () {
     let paintWhiteSmall;
     let paintWhiteMedium;
     let paintWhiteLarge;
